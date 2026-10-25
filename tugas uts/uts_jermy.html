@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding invitation for Thiago Messi Roccuzzo & Mavie da Silva Santos. Elegant light theme with countdown, event details, gallery, RSVP, and gift information." />
+  <meta property="og:title" content="Thiago Messi Roccuzzo & Mavie da Silva Santos Wedding Invitation" />
+  <meta property="og:description" content="You are warmly invited to celebrate our wedding." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80" />
+  <title>Thiago Messi Roccuzzo & Mavie da Silva Santos</title>
+
+  <!-- Memuat Bootstrap untuk mengatur tampilan halaman -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Memuat ikon yang dipakai di halaman -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Memuat jenis huruf untuk teks halaman -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="locked">
+
+  <div id="invitation-cover">
+    <div class="cover-arch">
+      <span class="section-subtitle">Wedding Invitation</span>
+      <img src="cover-portrait.jpg" alt="Thiago Messi Roccuzzo and Mavie da Silva Santos" class="cover-couple-img" />
+      <h1 class="display-5 serif fw-bold mb-1">Thiago Messi Roccuzzo &amp; Mavie da Silva Santos</h1>
+      <p class="text-muted small mb-3">Saturday, November 28, 2026</p>
+
+      <div class="guest-box">
+        <small class="text-muted d-block mb-1">Dear Honored Guest,</small>
+        <h5 class="serif fw-bold mb-0" id="guest-name-display">Family &amp; Friends</h5>
+      </div>
+
+      <button class="btn btn-gold w-100" id="btn-open-invitation">
+        <i class="bi bi-envelope-open me-2"></i>Open Invitation
+      </button>
+    </div>
+  </div>
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2 text-center">
+          <div class="hero-arch-frame">
+            <img src="main-couple.jpg" alt="Thiago Messi Roccuzzo and Mavie da Silva Santos" />
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+          <span class="section-subtitle">We Are Getting Married</span>
+          <h1 class="display-2 serif fw-semibold mb-2">Thiago Messi Roccuzzo <span class="script-font px-2">&amp;</span> Mavie da Silva Santos</h1>
+          <p class="lead text-muted mb-4">
+            We are honored to invite you to witness and celebrate the beginning of our new chapter together.
+          </p>
+
+          <!-- Hitung mundur menuju hari pernikahan -->
+          <div class="d-flex justify-content-center justify-content-lg-start gap-2 gap-sm-3 mb-4" id="countdown">
+            <div class="countdown-box text-center">
+              <div class="countdown-number" id="cd-days">00</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box text-center">
+              <div class="countdown-number" id="cd-hours">00</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box text-center">
+              <div class="countdown-number" id="cd-minutes">00</div>
+              <div class="countdown-label">Mins</div>
+            </div>
+            <div class="countdown-box text-center">
+              <div class="countdown-number" id="cd-seconds">00</div>
+              <div class="countdown-label">Secs</div>
+            </div>
+          </div>
+
+          <a href="#event" class="btn btn-gold">
+            <i class="bi bi-calendar-heart me-2"></i>Save The Date
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="couple" class="section-padding">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-subtitle">Hola a todos</span>
+        <h2 class="section-title">The Happy Couple</h2>
+        <div class="floral-divider"><i class="bi bi-suit-heart-fill"></i></div>
+        <p class="text-muted mx-auto mb-5" style="max-width: 600px;">
+          With hearts full of gratitude, we invite you to witness the sacred promise of our marriage.
+        </p>
+      </div>
+
+      <div class="row align-items-center justify-content-center g-4">
+        <!-- Foto dan informasi mempelai pria -->
+        <div class="col-md-5 reveal">
+          <div class="couple-avatar-wrap">
+            <img src="Thiago.jpg" alt="Thiago Messi Roccuzzo" />
+          </div>
+          <h3 class="serif fw-bold fs-2 mb-1">Thiago Messi Roccuzzo</h3>
+          <p class="text-muted small mb-2">First Daughter of Mr.  Lionel Messi and Mrs. Antonela Roccuzzo</p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a href="https://www.instagram.com/thiagomessir10?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Simbol di antara nama kedua mempelai -->
+        <div class="col-md-2 reveal">
+          <span class="script-font display-2">&amp;</span>
+        </div>
+
+        <!-- Foto dan informasi mempelai wanita -->
+        <div class="col-md-5 reveal">
+          <div class="couple-avatar-wrap">
+            <img src="Mavie.jpg" alt="Mavie da Silva Santos" />
+          </div>
+          <h3 class="serif fw-bold fs-2 mb-1">Mavie da Silva Santos</h3>
+          <p class="text-muted small mb-2">Second Daughter of Mr.Neymar da Silva Santos Júnior and Mrs. Bruna Biancardi</p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a href="https://www.instagram.com/neymarjr?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="event" class="section-padding" style="background-color: var(--bg-Paper);">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-subtitle">Save The Date</span>
+        <h2 class="section-title">Wedding Events</h2>
+        <div class="floral-divider"><i class="bi bi-stars"></i></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Informasi upacara pernikahan -->
+        <div class="col-md-6 col-lg-5 reveal">
+          <div class="elegant-card">
+            <div class="event-icon-badge">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h3 class="serif fw-bold fs-2 mb-3">Holy Matrimony</h3>
+            <p class="fw-semibold mb-1"><i class="bi bi-calendar3 me-2 text-warning"></i>Saturday, November 28, 2026</p>
+            <p class="text-muted mb-3"><i class="bi bi-clock me-2 text-warning"></i>09:00 AM – 11:00 AM</p>
+            <hr class="my-3 opacity-25" />
+            <h6 class="fw-semibold mb-1">St. Basílica i Temple Expiatori de la Sagrada Família</h6>
+            <p class="text-muted small mb-4">Calle de Mallorca 401, Barcelona, Cataluña</p>
+            <a href="https://maps.app.goo.gl/NtHU8VvkcUMxXKpdA" target="_blank" class="btn btn-outline-gold">
+              <i class="bi bi-geo-alt me-1"></i>Open Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Informasi acara resepsi -->
+        <div class="col-md-6 col-lg-5 reveal">
+          <div class="elegant-card">
+            <div class="event-icon-badge">
+              <i class="bi bi-cup-straw"></i>
+            </div>
+            <h3 class="serif fw-bold fs-2 mb-3">Wedding Reception</h3>
+            <p class="fw-semibold mb-1"><i class="bi bi-calendar3 me-2 text-warning"></i>Saturday, November 28, 2026</p>
+            <p class="text-muted mb-3"><i class="bi bi-clock me-2 text-warning"></i>19:00 PM – 22:30 PM</p>
+            <hr class="my-3 opacity-25" />
+            <h6 class="fw-semibold mb-1">Royal Ramblas Hotel</h6>
+            <p class="text-muted small mb-4">Rambla 117, Barcelona</p>
+            <a href="https://maps.app.goo.gl/2HaVEzsaHDqDVXbz9" target="_blank" class="btn btn-outline-gold">
+              <i class="bi bi-geo-alt me-1"></i>Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section-padding">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-subtitle">How We Met</span>
+        <h2 class="section-title">Our Love Story</h2>
+        <div class="floral-divider"><i class="bi bi-heart"></i></div>
+      </div>
+
+      <div class="timeline mt-5">
+        <div class="row timeline-item align-items-center reveal">
+          <div class="timeline-dot"></div>
+          <div class="col-md-6 text-md-end pe-md-5 ps-5 ps-md-3">
+            <span class="badge rounded-pill mb-2" style="background: var(--gold-primary);">October 2024</span>
+            <h4 class="serif fw-bold">Kick-Off</h4>
+            <p class="text-muted small mb-0">
+              We met in the stands at Camp Nou during El Clásico. Out of a sea of Barça fans,
+              fate seated us side by side. When the last-minute goal went in, we screamed, jumped, and hugged without thinking.
+              After the final whistle, we talked over coffee outside the stadium, and the game of a lifetime had begun.
+            </p>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+
+        <div class="row timeline-item align-items-center reveal">
+          <div class="timeline-dot"></div>
+          <div class="col-md-6"></div>
+          <div class="col-md-6 ps-5">
+            <span class="badge rounded-pill mb-2" style="background: var(--gold-primary);">August 2025</span>
+            <h4 class="serif fw-bold">Our First Away Day</h4>
+            <p class="text-muted small mb-0">
+              We packed a bag for our first trip together: a coastal drive along the Costa Brava,
+              then an away day to Madrid to watch Barça in enemy territory. Surrounded by rival fans, we only had eyes for each other.
+              We knew we had found our teammate for life.
+            </p>
+          </div>
+        </div>
+
+        <div class="row timeline-item align-items-center reveal">
+          <div class="timeline-dot"></div>
+          <div class="col-md-6 text-md-end pe-md-5 ps-5 ps-md-3">
+            <span class="badge rounded-pill mb-2" style="background: var(--gold-primary);">February 2026</span>
+            <h4 class="serif fw-bold">The Winning Goal</h4>
+            <p class="text-muted small mb-0">
+              Back home in Barcelona, beneath the warm glow of the Camp Nou floodlights and surrounded by our closest friends,
+              Thiago Messi Roccuzzo knelt at the center of the pitch and Mavie da Silva Santos said “Yes!” The whole stadium seemed to erupt, as if celebrating the greatest goal ever scored.
+            </p>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section-padding" style="background-color: var(--bg-Paper);">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-subtitle">Captured Moments</span>
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="floral-divider"><i class="bi bi-camera"></i></div>
+      </div>
+
+      <div class="row g-3 g-md-4">
+        <div class="col-6 col-md-3 reveal">
+          <img src="gallery-1.jpg" class="gallery-img" alt="Gallery 1" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="col-6 col-md-3 reveal">
+          <img src="gallery-2.jpg" class="gallery-img" alt="Gallery 2" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="col-6 col-md-3 reveal">
+          <img src="gallery-3.jpg" class="gallery-img" alt="Gallery 3" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="col-6 col-md-3 reveal">
+          <img src="gallery-4.jpg" class="gallery-img" alt="Gallery 4" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="section-padding">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-subtitle">Love Token</span>
+        <h2 class="section-title">Wedding Gift</h2>
+        <div class="floral-divider"><i class="bi bi-gift"></i></div>
+        <p class="text-muted mx-auto mb-5" style="max-width: 580px;">
+          Your presence and prayers are the greatest gift of all. However, if you wish to bless us with a token of love, you may use the details below.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5 reveal">
+          <div class="elegant-card py-4">
+            <i class="bi bi-bank fs-2 mb-2 d-block" style="color: var(--gold-primary);"></i>
+            <h5 class="serif fw-bold mb-1">Mandiri Bank</h5>
+            <p class="text-muted small mb-2">Account Holder: Thiago Messi Roccuzzo &amp; Mavie da Silva Santos</p>
+            <h4 class="fw-bold letter-spacing-1 mb-3" id="acc-1">8492 0192 3847</h4>
+            <button class="btn btn-outline-gold btn-sm" onclick="copyText(document.getElementById('acc-1').textContent.replace(/\s/g, ''), this)">
+              <i class="bi bi-clipboard me-1"></i>Copy Account Number
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-5 reveal">
+          <div class="elegant-card py-4">
+            <i class="bi bi-house-heart fs-2 mb-2 d-block" style="color: var(--gold-primary);"></i>
+            <h5 class="serif fw-bold mb-1">Send Physical Gift</h5>
+            <p class="text-muted small mb-2">Recipient: Thiago Messi Roccuzzo &amp; Mavie da Silva Santos</p>
+            <p class="fw-medium mb-3" id="acc-2">Passeig de la Creu, Bellamar</p>
+            <button class="btn btn-outline-gold btn-sm" onclick="copyText(document.getElementById('acc-2').textContent, this)">
+              <i class="bi bi-clipboard me-1"></i>Copy Address
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section-padding" style="background-color: var(--bg-Paper);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-subtitle">Guestbook &amp; Attendance</span>
+        <h2 class="section-title">RSVP &amp; Best Wishes</h2>
+        <div class="floral-divider"><i class="bi bi-chat-heart"></i></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Formulir konfirmasi kehadiran -->
+        <div class="col-lg-5 reveal">
+          <div class="elegant-card">
+            <h4 class="serif fw-bold mb-3">Confirm Attendance</h4>
+            <form id="rsvp-form">
+              <div class="mb-3">
+                <label class="form-label small text-muted" for="rsvp-name">Your Name</label>
+                <input type="text" class="form-control" id="rsvp-name" placeholder="Enter your full name" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted" for="rsvp-status">Will You Attend?</label>
+                <select class="form-select" id="rsvp-status" required>
+                  <option value="Attending">Joyfully Attending</option>
+                  <option value="Unable to Attend">Regretfully Unable to Attend</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted" for="rsvp-message">Your Wishes for the Couple</label>
+                <textarea class="form-control" id="rsvp-message" rows="3" placeholder="Write your warm prayers and wishes..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold w-100">
+                <i class="bi bi-send me-2"></i>Send RSVP &amp; Wishes
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Daftar pesan dan ucapan dari tamu -->
+        <div class="col-lg-6 reveal">
+          <div class="elegant-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="serif fw-bold mb-0">Warm Wishes</h4>
+              <span class="badge rounded-pill" style="background: var(--gold-primary);" id="wish-count">0 Wishes</span>
+            </div>
+            <div class="wish-list" id="wish-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-5 text-center" style="padding-bottom: 110px !important;">
+    <div class="container">
+      <p class="text-muted small mb-1">Thank you for being part of our special day</p>
+      <h2 class="script-font display-4 mb-3">Thiago Messi Roccuzzo &amp; Mavie da Silva Santos</h2>
+      <p class="small text-muted mb-0">&copy; Jermy_Timur_Baik</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center position-relative">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+          <img src="" id="lightbox-img" class="img-fluid rounded-4 shadow-lg" alt="Preview" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bg-music" preload="metadata" loop>
+    <source src="Flying_Dutchman_mp3.mp3.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <button class="floating-music-btn" id="music-toggle" type="button" title="Play music" aria-label="Play music" aria-pressed="false">
+    <i class="bi bi-disc"></i>
+  </button>
+  <p id="music-status" class="visually-hidden" role="status" aria-live="polite"></p>
+
+  <nav class="bottom-nav">
+    <a href="#home" class="active"><i class="bi bi-house-heart"></i><span>Home</span></a>
+    <a href="#couple"><i class="bi bi-heart"></i><span>Couple</span></a>
+    <a href="#event"><i class="bi bi-calendar2-heart"></i><span>Event</span></a>
+    <a href="#gallery"><i class="bi bi-images"></i><span>Gallery</span></a>
+    <a href="#rsvp"><i class="bi bi-chat-square-heart"></i><span>RSVP</span></a>
+  </nav>
+
+  <!-- Memuat fungsi Bootstrap untuk komponen halaman -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
