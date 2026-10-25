@@ -1,0 +1,448 @@
+    :root {
+      --bg-ivory: #FAF7F2;
+      --bg-Paper: #F3EDE2;
+      --gold-primary: #B89B5E;
+      --gold-dark: #967A3E;
+      --gold-light: #E6D8B8;
+      --text-dark: #2C2623;
+      --text-muted: #716862;
+      --white: #FFFFFF;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-script: 'Great Vibes', cursive;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-ivory);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: var(--font-serif);
+    }
+
+    .script-font {
+      font-family: var(--font-script);
+      color: var(--gold-primary);
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .floral-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px auto 35px;
+      max-width: 260px;
+    }
+
+    .floral-divider::before,
+    .floral-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+    }
+
+    .floral-divider i {
+      color: var(--gold-primary);
+      font-size: 1rem;
+    }
+
+    /* Gaya tombol */
+    .btn-gold,
+    .btn-outline-gold {
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold {
+      background-color: var(--gold-primary);
+      color: var(--white);
+      border: 1px solid var(--gold-primary);
+      padding: 11px 28px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--gold-dark);
+      border-color: var(--gold-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px 
+                    rgba(184, 155, 94, 0.28);
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+      padding: 10px 24px;
+      font-size: 0.85rem;
+    }
+
+    .btn-outline-gold:hover {
+      background-color: var(--gold-primary);
+      color: var(--white);
+    }
+
+    /* Tampilan sampul sebelum undangan dibuka */
+    #invitation-cover {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: linear-gradient(
+                    rgba(250, 247, 242, 0.86), 
+                    rgba(250, 247, 242, 0.94)),
+                  url('cover-background.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+    }
+
+    #invitation-cover.opened {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cover-arch {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--gold-light);
+      border-radius: 220px 220px 24px 24px;
+      padding: 60px 36px 45px;
+      max-width: 460px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(44, 38, 35, 0.08);
+    }
+
+    .cover-couple-img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100px 100px 16px 16px;
+      border: 3px solid var(--gold-light);
+      padding: 4px;
+      margin-bottom: 20px;
+    }
+
+    .guest-box {
+      background: var(--bg-ivory);
+      border: 1px dashed var(--gold-primary);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin: 20px 0 24px;
+    }
+
+    /* Bagian utama halaman */
+    .hero-section {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg-ivory) 70%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 100px 0 80px;
+    }
+
+    .hero-arch-frame {
+      border: 1px solid var(--gold-primary);
+      border-radius: 300px 300px 20px 20px;
+      padding: 14px;
+      max-width: 400px;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: 0 20px 45px rgba(184, 155, 94, 0.12);
+    }
+
+    .hero-arch-frame img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 290px 290px 12px 12px;
+    }
+
+    /* Kotak hitung mundur */
+    .countdown-box {
+      background: var(--white);
+      border: 1px solid var(--gold-light);
+      border-radius: 16px;
+      padding: 18px 12px;
+      min-width: 82px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .countdown-number {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .letter-spacing-1 {
+      letter-spacing: 1px;
+    }
+
+    /* Foto dan informasi kedua mempelai */
+    .couple-avatar-wrap {
+      width: 220px;
+      height: 280px;
+      margin: 0 auto 24px;
+      padding: 8px;
+      border: 1px solid var(--gold-primary);
+      border-radius: 130px 130px 20px 20px;
+      background: var(--white);
+    }
+
+    .couple-avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 122px 122px 14px 14px;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid var(--gold-light);
+      color: var(--gold-primary);
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .social-icon:hover {
+      background: var(--gold-primary);
+      color: var(--white);
+    }
+
+    /* Kartu informasi acara */
+    .elegant-card {
+      background: var(--white);
+      border: 1px solid var(--gold-light);
+      border-radius: 24px;
+      padding: 42px 30px;
+      height: 100%;
+      box-shadow: 0 12px 32px rgba(44, 38, 35, 0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .elegant-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .event-icon-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-ivory);
+      border: 1px solid var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--gold-primary);
+      margin-bottom: 20px;
+    }
+
+    /* Garis waktu cerita pasangan */
+    .timeline {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: var(--gold-light);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      background: var(--gold-primary);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 24px;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 0 3px var(--gold-light);
+    }
+
+    @media (max-width: 767px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-dot {
+        left: 20px;
+      }
+    }
+
+    /* Galeri foto */
+    .gallery-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+      cursor: pointer;
+      border: 1px solid var(--gold-light);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Daftar ucapan dari tamu */
+    .wish-list {
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .wish-item {
+      background: var(--bg-ivory);
+      border-left: 3px solid var(--gold-primary);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+
+    /* Tombol musik dan menu bawah yang tetap terlihat saat digulir */
+    .floating-music-btn {
+      position: fixed;
+      bottom: 85px;
+      right: 20px;
+      z-index: 1030;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .floating-music-btn.playing i {
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1030;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-light);
+      border-radius: 50px;
+      padding: 8px 18px;
+      box-shadow: 0 10px 30px 
+                    rgba(44, 38, 35, 0.12);
+      display: flex;
+      gap: 8px;
+    }
+
+    .bottom-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.25s;
+    }
+
+    .bottom-nav a i {
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .bottom-nav a:hover,
+    .bottom-nav a.active {
+      background: var(--gold-primary);
+      color: var(--white);
+    }
+
+    /* Efek elemen muncul saat digulir */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
